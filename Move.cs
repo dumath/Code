@@ -25,7 +25,7 @@ public class Move : MonoBehaviour
         movement = this.transform.TransformDirection(movement);
         character.Move(movement);
 #else
-        float z = Vector3.forward.z * MoveStick.Sensativity * speed;
+        float z = MoveStick.Sensativity * speed;
         Vector3 movement = new Vector3(0.0f, gravity, z);
         //movement = Vector3.ClampMagnitude(movement, speed);
         movement *= Time.deltaTime;
