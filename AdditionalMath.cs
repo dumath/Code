@@ -15,4 +15,18 @@ public static class AdditionalMath
     {
         return minTo + (value - minFrom) / (maxFrom - minFrom) * (maxTo - minTo);
     }
+
+    /// <summary>
+    /// Тряска плоскости.
+    /// </summary>
+    /// <param name="minStrange"> Минимальное отклонение. </param>
+    /// <param name="maxStrange"> Максимальное отклонение. </param>
+    /// <returns> Конечное смещение центра плоскости. </returns>
+    public Vector2 Noise2D(float minStrange = 0.0f, float maxStrange = 1.0f)
+    {
+        Vector2 handledPoint = new Vector2();
+        handledPoint.x = Random.Range(minStrange, maxStrange);
+        handledPoint.y = Random.Range(minStrange, maxStrange);
+        return handledPoint;
+    }
 }
